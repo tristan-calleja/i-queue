@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'orderitems/index'
+  get 'orderitems/show'
+  get 'orderitems/destroy'
+  get 'orderitems/new'
+  get 'orderitems/create'
+  get 'orderitems/update'
+  get 'orderitems/edit'
   get 'fooditems/index'
   get 'fooditems/show'
   get 'fooditems/destroy'
