@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'payments/index'
+  get 'payments/show'
+  get 'payments/destroy'
+  get 'payments/new'
+  get 'payments/create'
+  get 'payments/update'
+  get 'payments/edit'
   get 'orders/index'
   get 'orders/show'
   get 'orders/destroy'
