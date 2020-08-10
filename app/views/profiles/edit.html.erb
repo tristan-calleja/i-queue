@@ -1,2 +1,6 @@
 <h1>Profiles#edit</h1>
-<p>Find me in app/views/profiles/edit.html.erb</p>
+
+<%= link_to 'Back', profiles_path, class: "btn btn-warning" %>
+<%= link_to 'Show', @profile %>
+
+<%= render 'form', profile: @profile %>
