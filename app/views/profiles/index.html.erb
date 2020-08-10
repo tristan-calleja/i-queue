@@ -2,16 +2,22 @@
 
 <h4> Welcome to you profile page <strong><i><%= current_user.username %></i></strong> </h4>
 
-<% @profiles do |profile| %>
+<%= link_to 'Create your profile', new_profile_path, class: "btn btn-warning" %>
 
-<h5> <%#= profile.firstname %> </h5>
-<h5> <%#= profile.lastname %> </h5>
-<h5> <%#= profile.address %> </h5>
-<h5> <%= current_user.email %> </h5>
-<h5> <%#= profile.phone %> </h5>
-<h5> <%#= profile.description %> </h5>
+<div class=" container">
 
+<h5> Your email: <%= current_user.email %> </h5>
 
-<h4> <%#= link_to "Edit", edit_profile_path(profile), class: "btn btn-warning" %> </h4>
+<% @profiles.each do |profile| %>
+
+<h5> First name: <%= profile.firstname %> </h5>
+<h5> Last name: <%= profile.lastname %> </h5>
+<h5> Address: <%= profile.address %> </h5>
+<h5> Phone: <%= profile.phone %> </h5>
+<h5> Description: <%= profile.description %> </h5>
+
+<h4> <%= link_to "Edit", edit_profile_path(profile), class: "btn btn-warning" %> </h4>
 
 <% end %>
+
+</div>

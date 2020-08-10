@@ -13,10 +13,10 @@ class User < ApplicationRecord
 
          has_one :profile, :dependent => :destroy
          
-  before_create :create_profile
-  
-  def create_profile
-    profile = build_profile(:firstname => “First Name”, :lastname => “Last Name”,) 
-  end
+  # before_create :create_profile
+
+  # # def create_profile
+  # #   profile = build_profile(:firstname => “First Name”, :lastname => “Last Name”,) 
+  # # end
 
 end
