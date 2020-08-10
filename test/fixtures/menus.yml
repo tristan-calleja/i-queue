@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 9.99
+  fooditem: one
+  startdate: 2020-08-10
+  enddate: 2020-08-10
+
+two:
+  price: 9.99
+  fooditem: two
+  startdate: 2020-08-10
+  enddate: 2020-08-10
