@@ -1,11 +1,18 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   def index
     @profiles = Profile.all
   end
 
   def show
+    
+  end
 
+  def new
+    @profile = Profile.new
+    # @user = User.find(params[:user_id])
   end
 
   def destroy
@@ -14,8 +21,7 @@ class ProfilesController < ApplicationController
   def create
   end
 
-  def new
-  end
+
 
   def update
   end

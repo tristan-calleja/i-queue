@@ -1,2 +1,17 @@
 <h1>Profiles#index</h1>
-<p>Find me in app/views/profiles/index.html.erb</p>
+
+<h4> Welcome to you profile page <strong><i><%= current_user.username %></i></strong> </h4>
+
+<% @profiles do |profile| %>
+
+<h5> <%#= profile.firstname %> </h5>
+<h5> <%#= profile.lastname %> </h5>
+<h5> <%#= profile.address %> </h5>
+<h5> <%= current_user.email %> </h5>
+<h5> <%#= profile.phone %> </h5>
+<h5> <%#= profile.description %> </h5>
+
+
+<h4> <%#= link_to "Edit", edit_profile_path(profile), class: "btn btn-warning" %> </h4>
+
+<% end %>

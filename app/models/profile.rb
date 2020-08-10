@@ -1,5 +1,8 @@
 class Profile < ApplicationRecord
   # belongs_to :orders
+  belongs_to :user
 
-  belongs_to :users
+  validates_uniqueness_of :user_id, :message => “User can only have one Profile”
+  validates :user_id, presence: true
+
 end
