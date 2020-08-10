@@ -1,8 +1,11 @@
 class ProfilesController < ApplicationController
+
   def index
+    @profiles = Profile.all
   end
 
   def show
+
   end
 
   def destroy
@@ -19,4 +22,16 @@ class ProfilesController < ApplicationController
 
   def edit
   end
+
+  private
+
+  def set_profile
+    @profile = Profile.find(params[:id])
+  end
+
+  def profile_params
+    params.require(:profile).permit(:user_id, :firstname, :lastname, :address, :phone, :description)
+  end
+
+
 end

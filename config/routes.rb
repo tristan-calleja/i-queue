@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   get 'profiles/index'
   get 'profiles/show'
   get 'profiles/destroy'
@@ -8,7 +10,11 @@ Rails.application.routes.draw do
   get 'profiles/update'
   get 'profiles/edit'
 
-  devise_for :users
+  resources :users do
+    resources :profiles
+  end
+
+  root 'profiles#index'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
