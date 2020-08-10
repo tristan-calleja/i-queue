@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'menu/index'
+  get 'menu/new'
+  get 'menu/create'
+  get 'menu/destroy'
+  get 'menu/edit'
+  get 'menu/update'
   get 'profiles/index'
   get 'profiles/show'
   get 'profiles/destroy'
