@@ -2,8 +2,9 @@
 
 <h4> Welcome to you profile page <strong><i><%= current_user.username %></i></strong> </h4>
 
-
+<%# if @profile.user_id = null %>
 <%= link_to 'Create your profile', new_user_profile_path(current_user.id), class: "btn btn-warning" %>
+<%# end %>
 
 <div class=" container">
 
