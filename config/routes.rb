@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
 
+  # get 'menus/index'
+  # get 'menus/show'
+  # get 'menus/create'
+  # get 'menus/new'
+  # get 'menus/destroy'
+  # get 'menus/edit'
+  # get 'menus/update'
   devise_for :users
 
 
@@ -32,12 +39,7 @@ Rails.application.routes.draw do
 #   get 'fooditems/create'
 #   get 'fooditems/update'
 #   get 'fooditems/edit'
-#   get 'menu/index'
-#   get 'menu/new'
-#   get 'menu/create'
-#   get 'menu/destroy'
-#   get 'menu/edit'
-#   get 'menu/update'
+
 
   get 'profiles/index'
   get 'profiles/show'
@@ -53,7 +55,7 @@ Rails.application.routes.draw do
 
   resources :profiles
 
-  resources :menu do
+  resources :menus do
     resources :fooditems
   end
   
