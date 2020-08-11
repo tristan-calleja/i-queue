@@ -1,16 +1,16 @@
 <h1>Profiles#index</h1>
 
-<h4> Welcome to you profile page <strong><i><%= current_user.username %></i></strong> </h4>
+<h4> Welcome to your profile page <strong><i><%= current_user.username %></i></strong> </h4>
 
-<%# if @profile.user_id = null %>
+<% unless @profile %>
 <%= link_to 'Create your profile', new_user_profile_path(current_user.id), class: "btn btn-warning" %>
-<%# end %>
+<% end %>
 
 <div class=" container">
 
 <% @profiles.each do |profile| %>
 
-<%= image_tag profile.profile_image %>
+<%= image_tag profile.profile_image, :size => "200x200" %> 
 <h5> First name: <%= profile.firstname %> </h5>
 <h5> Last name: <%= profile.lastname %> </h5>
 <h5> Your email: <%= current_user.email %> </h5>
