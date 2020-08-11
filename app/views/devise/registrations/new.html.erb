@@ -2,15 +2,18 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  	<div class="container h-100 mt-5 pt-5">
-		<div class="d-flex justify-content-center h-100">
+  	<div class="container mt-5 pt-5">
+		<div class="d-flex justify-content-center">
 			<div class="user_card">
-				<div class="d-flex justify-content-center">
+				<div class="d-flex justify-content-center ">
 					<div class="brand_logo_container">
 						<img src="/donutlogo.png" class="brand_logo" alt="Logo">
 					</div>
 				</div>
 				<div class="justify-content-center form_container">
+          <div class="d-flex justify-content-center login_container ">
+            <h1> Sign Up </h1>
+          </div>
 					<form>
 						<div class="input-group mb-3">
 							<div class="input-group-append">
@@ -36,7 +39,7 @@
 						</div>
 						</div>
 						<div class="form-group">
-							<div class="custom-control custom-checkbox mt-3">
+							<div class="d-flex justify-content-center custom-control custom-checkbox mt-3">
 								<input type="checkbox" class="custom-control-input" id="customControlInline">
 								<label class="custom-control-label" for="customControlInline">Remember me</label>
 							</div>
@@ -46,7 +49,7 @@
               </div>
 
            <div class="d-flex justify-content-center mt-1 login_container actions">
-            <a href="#">Sign in</a>
+            <%= link_to  "Sign In", new_user_session_path %>
             
             </div>
 				   </div>
