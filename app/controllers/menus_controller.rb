@@ -1,8 +1,11 @@
 class MenusController < ApplicationController
 
     before_action :set_menu, only: [:show, :edit, :update, :destroy]
-  
-  
+
+    def landing
+      
+    end
+
     def index
       @menu = User.find(current_user.id).menu
       @menus = Menu.all
