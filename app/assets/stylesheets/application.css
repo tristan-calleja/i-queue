@@ -15,15 +15,20 @@
  *= require_self
  */
 
+
+ 
  body,
 		html {
 			margin: 0;
 			padding: 0;
 			height: 100%;
-			background: #70b0f7 !important;
+			background: #f1f1f1 !important;
 		}
 		.user_card {
-			height: 400px;
+			font-family: futura-pt-bold, sans-serif;
+			font-weight: 700;
+			font-style: normal;
+			height: 500px;
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;
@@ -45,7 +50,7 @@
 			width: 170px;
 			top: -75px;
 			border-radius: 50%;
-			background: #70b0f7;
+			background: #f1f1f1;
 			padding: 10px;
 			text-align: center;
 		}

@@ -11,6 +11,7 @@
   
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.typekit.net/aab2ewm.css">
   </head>
 
   <body>
@@ -21,21 +22,6 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-
-    <% if user_signed_in? %>
-          <% if current_user.admin? %>
-            <h4>Admin User</h4>
-          <% end %>
-        <%= current_user.email %>
-        <%= link_to  "Logout", destroy_user_session_path, method: :delete %>    
-      <% else %>
-        <%= link_to  "Sign up", new_user_registration_path %>
-        <%= link_to  "Sign In", new_user_session_path %>
-    <% end %>
-
-
-
-
     <%= yield %>
 
 

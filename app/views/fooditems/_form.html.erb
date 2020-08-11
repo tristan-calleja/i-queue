@@ -13,6 +13,12 @@
     <% end %>
 
     <div class="container">
+
+        <div class="form-row">
+            <%= f.label :fooditem_image, "Upload food pic" %>
+            <%= f.file_field :fooditem_image, class: "form-control" %>
+        </div>
+
         <div class="form-row">
             <%= f.label :name, "Item Name" %>
             <%= f.text_field :name, class: "form-control" %>
