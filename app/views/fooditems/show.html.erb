@@ -1,2 +1,21 @@
 <h1>Fooditems#show</h1>
 <p>Find me in app/views/fooditems/show.html.erb</p>
+
+<div>
+    <p>
+        Item Name: 
+        <%= @fooditem.name %>
+    </p>
+    <p>
+        Item Quantity: 
+        <%= @fooditem.quantity %>
+    </p>  
+    <p>
+        Unit Price:
+        $<%= @fooditem.unitprice %>
+    </p>  
+    <p>
+        Item Category: 
+        <%= @fooditem.itemcategory %>
+    </p>      
+</div>
