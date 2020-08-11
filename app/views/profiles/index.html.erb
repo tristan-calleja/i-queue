@@ -2,16 +2,17 @@
 
 <h4> Welcome to you profile page <strong><i><%= current_user.username %></i></strong> </h4>
 
+
 <%= link_to 'Create your profile', new_user_profile_path(current_user.id), class: "btn btn-warning" %>
 
 <div class=" container">
 
-<h5> Your email: <%= current_user.email %> </h5>
-
 <% @profiles.each do |profile| %>
 
+<%= image_tag profile.profile_image %>
 <h5> First name: <%= profile.firstname %> </h5>
 <h5> Last name: <%= profile.lastname %> </h5>
+<h5> Your email: <%= current_user.email %> </h5>
 <h5> Address: <%= profile.address %> </h5>
 <h5> Phone: <%= profile.phone %> </h5>
 <h5> Description: <%= profile.description %> </h5>
