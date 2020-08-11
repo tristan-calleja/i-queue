@@ -4,6 +4,7 @@ class MenusController < ApplicationController
   
   
     def index
+      @menu = User.find(current_user.id).menu
       @menus = Menu.all
     end
   
@@ -13,6 +14,8 @@ class MenusController < ApplicationController
   
     def create
       @menu = Menu.new(menu_params)
+      @menu["user_id"] = current_user.id
+
       respond_to do |format|
         if @menu.save
           format.html { redirect_to @menu, notice: 'Menu successfully created.' }
@@ -49,7 +52,7 @@ class MenusController < ApplicationController
     end
   
     def menu_params
-      params.require(:menu).permit(:fooditem_id, :price, :startdate, :enddate)
+      params.require(:menu).permit(:fooditem_id, :price, :startdate, :enddate, :menu_name)
     end
   
 
