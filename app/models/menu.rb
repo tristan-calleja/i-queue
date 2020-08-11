@@ -1,3 +1,3 @@
 class Menu < ApplicationRecord
-  belongs_to :fooditem
+  has_many :fooditems
 end

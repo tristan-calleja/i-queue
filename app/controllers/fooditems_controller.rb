@@ -1,5 +1,6 @@
 class FooditemsController < ApplicationController
   before_action :set_fooditem, only: [:show, :edit, :update, :destroy]
+  
   def index
   end
 

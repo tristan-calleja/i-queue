@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   def index
+    @profile = User.find(current_user.id).profile
     @profiles = Profile.all
   end
 
@@ -12,7 +13,6 @@ class ProfilesController < ApplicationController
 
   def new
     @profile = Profile.new
-    # @user = User.find(params[:user_id])
   end
 
   def create

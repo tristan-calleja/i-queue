@@ -53,6 +53,10 @@ Rails.application.routes.draw do
 
   resources :profiles
 
+  resources :menu do
+    resources :fooditems
+  end
+  
   resources :fooditems
 
   root 'profiles#index'
