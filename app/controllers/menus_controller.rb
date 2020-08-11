@@ -14,7 +14,7 @@ class MenusController < ApplicationController
   
     def create
       @menu = Menu.new(menu_params)
-      @menu["user_id"] = current_user.id
+      # @menu["user_id"] = current_user.id
 
       respond_to do |format|
         if @menu.save
