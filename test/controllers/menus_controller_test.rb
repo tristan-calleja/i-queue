@@ -1,33 +1,38 @@
 require 'test_helper'
 
-class MenuControllerTest < ActionDispatch::IntegrationTest
+class MenusControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get menu_index_url
+    get menus_index_url
     assert_response :success
   end
 
-  test "should get new" do
-    get menu_new_url
+  test "should get show" do
+    get menus_show_url
     assert_response :success
   end
 
   test "should get create" do
-    get menu_create_url
+    get menus_create_url
+    assert_response :success
+  end
+
+  test "should get new" do
+    get menus_new_url
     assert_response :success
   end
 
   test "should get destroy" do
-    get menu_destroy_url
+    get menus_destroy_url
     assert_response :success
   end
 
   test "should get edit" do
-    get menu_edit_url
+    get menus_edit_url
     assert_response :success
   end
 
   test "should get update" do
-    get menu_update_url
+    get menus_update_url
     assert_response :success
   end
 
