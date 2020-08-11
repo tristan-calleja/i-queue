@@ -40,7 +40,7 @@ Rails.application.routes.draw do
 #   get 'fooditems/update'
 #   get 'fooditems/edit'
 
-
+  get 'menus/landing'
   get 'profiles/index'
   get 'profiles/show'
   get 'profiles/destroy'
@@ -61,7 +61,7 @@ Rails.application.routes.draw do
   
   resources :fooditems
 
-  root 'profiles#index'
+  root 'menus#landing'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
