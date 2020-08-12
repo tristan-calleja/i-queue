@@ -7,7 +7,7 @@ class MenusController < ApplicationController
     end
 
     def index
-      @menu = User.find(current_user.id).menu
+      # @menu = User.find(current_user.id).menu
       @menus = Menu.all
     end
   

@@ -6,10 +6,11 @@
         Item Name: 
         <%= @fooditem.name %>
     </p>
-    <p>
-        Item Name: 
-        <%= image_tag @fooditem.fooditem_image, :size => "200x200 %>
-    </p>
+    <div>
+    <% if @fooditem.fooditem_image.attached? %>
+        <%= image_tag @fooditem.fooditem_image, :size => "200x200" %>
+    <% end %>
+    </div>
     <p>
         Item Quantity: 
         <%= @fooditem.quantity %>
