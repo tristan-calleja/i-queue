@@ -7,6 +7,7 @@ class MenusController < ApplicationController
     end
 
     def show
+      @menu = Menu.find(params[:id])
       @menus = Menu.all
     end
 
@@ -20,7 +21,7 @@ class MenusController < ApplicationController
     end
   
     def create
-      @menu = Menu.new(menu_params)
+      @menu = Menu.new
       # @menu["user_id"] = current_user.id
 
       respond_to do |format|
