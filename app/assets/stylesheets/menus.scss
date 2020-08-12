@@ -1,3 +1,152 @@
 // Place all the styles related to the menus controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.vertical-tab {
+    font-family: 'Nunito', sans-serif;
+    display: table;
+}
+
+.vertical-tab .nav-tabs {
+    display: table-cell;
+    width: 28%;
+    min-width: 28%;
+    vertical-align: top;
+    border: none;
+}
+
+.vertical-tab .nav-tabs li {
+    float: none;
+    vertical-align: top;
+}
+
+.vertical-tab .nav-tabs li a {
+    color: #4f000b;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    margin: 0 10px 10px 0;
+    border-radius: 0;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.vertical-tab .nav-tabs li:last-child a {
+    margin-bottom: 0;
+}
+
+.vertical-tab .nav-tabs li a:hover,
+.vertical-tab .nav-tabs li.active a,
+.vertical-tab .nav-tabs li.active a:hover {
+    color: #fff;
+    border: none;
+}
+
+.vertical-tab .nav-tabs li a:before,
+.vertical-tab .nav-tabs li a:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 3px solid #4f000b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.vertical-tab .nav-tabs li a:hover:before,
+.vertical-tab .nav-tabs li.active a:before,
+.vertical-tab .nav-tabs li.active a:hover:before {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.vertical-tab .nav-tabs li a:after {
+    background: #4f000b;
+    border: none;
+    opacity: 0;
+    transform: scale(1.5);
+    z-index: -1;
+}
+
+.vertical-tab .nav-tabs li a:hover:after,
+.vertical-tab .nav-tabs li.active a:after,
+.vertical-tab .nav-tabs li.active a:hover:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.vertical-tab .tab-content {
+    color: #fff;
+    background: #f77422;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    padding: 20px 20px 10px;
+    margin-top: 10px;
+    display: table-cell;
+    position: relative;
+}
+
+.vertical-tab .tab-content:before,
+.vertical-tab .tab-content:after {
+    content: "";
+    background: linear-gradient(-45deg, transparent 75%, #f77422 75%) 0 50%, linear-gradient(45deg, transparent 75%, #f77422 75%) 0 50%;
+    background-repeat: repeat-x;
+    background-size: 16px;
+    width: 100%;
+    height: 21px;
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+}
+
+.vertical-tab .tab-content:after {
+    transform: rotate(-180deg);
+    bottom: auto;
+    top: -21px;
+}
+
+.vertical-tab .tab-content h3 {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 7px 0;
+}
+
+@media only screen and (max-width: 479px) {
+    .vertical-tab .nav-tabs {
+        width: 100%;
+        margin: 0 0 20px;
+        display: block;
+        border: none;
+    }
+
+    .vertical-tab .nav-tabs li a {
+        margin: 0 0 10px;
+    }
+
+    .vertical-tab .tab-content {
+        padding: 25px 20px;
+        margin-top: 0;
+        border-left: none;
+        border-top: 2px solid #999;
+        display: block;
+    }
+
+    .vertical-tab .tab-content h3 {
+        font-size: 18px;
+    }
+}
