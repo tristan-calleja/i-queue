@@ -53,7 +53,7 @@
                 <a href="#" class="nav-item nav-link" data-toggle="dropdown">My Account</a>
                 <div class="dropdown-menu">
                   <div class="dropdown-item">
-                  <%#= link_to  "Update Profile", edit_user_profile_path(current_user.id), :class => "nav-item nav-link" %>
+                  <%= link_to  "Update Profile", edit_user_profile_path(current_user.id, current_user.id), :class => "nav-item nav-link" %>
                   </div>
                   <div class="dropdown-item">
                   <%= link_to  "Logout", destroy_user_session_path, method: :delete, :class => "nav-item nav-link" %>
