@@ -2,7 +2,17 @@
 <p>Find me in app/views/menus/index.html.erb</p>
 
 
-<h2>Menu list:<h2>
+<h2>Menu list:</h2>
         <div>
+        
+            
         <% @menus.each do |menu| %>
+        
+        <ul>
+            <li>
+            <%= menu.menu_name %>
+            
+            </li>
+        </ul>
+        <% end %>
         <div>
