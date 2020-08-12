@@ -338,6 +338,12 @@
 			font-size: 25px;
 			color: #5e3a1c;
 			margin-top: 140px !important;
+			animation: bounce;
+			animation-duration: 2s;
+		}
+		.donut {
+			animation: bounce;
+			animation-duration: 2s;
 		}
 	
 	
