@@ -1,2 +1,42 @@
 <h1>Fooditems#index</h1>
 <p>Find me in app/views/fooditems/index.html.erb</p>
+
+
+<div class="container">
+<%= link_to 'Add a new product', new_fooditem_path, class: "btn btn-warning" %>
+<table class="table mt-4">
+<tr>
+    <td>ID</td>
+    <td>Food Item</td>
+    <td>Quantity</td>
+    <td>Unit Price</td>
+    <td>Category</td>
+    <td>Menu</td>
+    <td>Actions</td>
+</tr>
+<% @fooditems.each do |fooditem| %>
+<tr>
+    <td>
+    <%= link_to fooditem.id, fooditem_path(fooditem.id) %>
+    </td>
+    <td><%= fooditem.name %></td>
+    <td><%= fooditem.quantity %></td>
+    <td><%= fooditem.unitprice %></td>
+    <td><%= fooditem.itemcategory %></td>
+    <td><%#= fooditem.menu %>
+    <%# For loop for each menus with checkbox %>
+    </td>
+    <td>
+        <%= link_to "Edit", edit_fooditem_path(fooditem), class: "btn btn-warning" %>
+
+        <%= link_to "Delete fooditem", fooditem_path(fooditem), method: "delete", data:{ confirm: "Are you sure you want to delete this fooditem"}, class: "btn btn-danger" %>
+
+        <%#= link_to "VALIDATE", edit_fooditem_path(fooditem), class: "btn btn-warning" %>
+        <%# UPDATE THE PRODUCT %>
+    </td>
+</tr>
+
+<% end %>
+
+</table>
+</div>

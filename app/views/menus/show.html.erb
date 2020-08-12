@@ -2,10 +2,12 @@
 <p>Find me in app/views/menus/show.html.erb</p>
 
 
-<div>
     <h1>MENU</h1>
     <p> 
-        Menu name:
+        
+        <%= link_to 'Back', menus_path %>
+        <div>
         <%= @menu.menu_name %>
+        </div>
+        
     </p>
-</div>
