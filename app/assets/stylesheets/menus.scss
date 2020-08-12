@@ -1,3 +1,85 @@
 // Place all the styles related to the menus controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.vertical-tab{
+    font-family: futura-pt-bold, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+    display: table;
+}
+.vertical-tab .nav-tabs{
+    display: table-cell;
+    width: 28%;
+    min-width: 28%;
+    vertical-align: top;
+    border: none;
+}
+.vertical-tab .nav-tabs li{
+   float: none;
+   vertical-align: top;
+}
+.vertical-tab .nav-tabs li a{
+    color: #f39c12;
+    background: #5e3a1c;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 13px 10px 10px;
+    margin: 0 9px 9px 0;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid rgba(0,0,0,0.15);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0.1s;
+}
+.vertical-tab .nav-tabs li a:hover,
+.vertical-tab .nav-tabs li.active a,
+.vertical-tab .nav-tabs li.active a:hover{
+    background: #5e3a1c;
+    color: rgb(241, 139, 139);
+    border-radius: 5px;
+}
+
+.vertical-tab .tab-content{
+    color: #555;
+    background: #fff;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    padding: 20px 20px 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    display: table-cell;
+    position: relative;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 479px){
+    .vertical-tab .nav-tabs{
+        width: 100%;
+        display: block;
+        border: none;
+    }
+    .vertical-tab .nav-tabs li a{ margin: 0 0 10px; }
+    .vertical-tab .tab-content{
+        padding: 25px 20px;
+        display: block;
+    }
+    .vertical-tab .tab-content h3{ font-size: 18px; }
+}
+
+.menubox {
+    margin-top: 100px;
+}
+
+.row {
+    // display:flex;
+}
