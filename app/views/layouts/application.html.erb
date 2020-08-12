@@ -31,6 +31,9 @@
     <nav class="navbar navbar-expand-md navbar-dark">
 		<div class="container">
 			<a href="#" class="navbar-brand"> <img src="/donutlogo.png" width="30" height="30" alt=""></a>
+      <% if current_user.admin? %>
+             <h4>Admin User</h4>
+             <% end %>
 			
 			<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
 				<span class="menu-icon-bar"></span>
@@ -47,15 +50,12 @@
           <%= link_to "Menu", menus_path, :class => "nav-item nav-link" %>
           </li>
             <% if user_signed_in? %>
-            <% if current_user.admin? %>
-             <h4>Admin User</h4>
-             <% end %>
              <%#= link_to "Logout", destroy_user_session_path, method: :delete, :class => "nav-item nav-link" %>
               <li class="dropdown">
                 <a href="#" class="nav-item nav-link" data-toggle="dropdown">My Account</a>
                 <div class="dropdown-menu">
                   <div class="dropdown-item">
-                  <%#= link_to  "Update Profile", edit_user_profile_path(current_user.id), :class => "nav-item nav-link" %>
+                  <%= link_to  "Update Profile", edit_user_profile_path(current_user.id, current_user.id), :class => "nav-item nav-link" %>
                   </div>
                   <div class="dropdown-item">
                   <%= link_to  "Logout", destroy_user_session_path, method: :delete, :class => "nav-item nav-link" %>
@@ -79,11 +79,10 @@
 			</div>
 		</div>
 	</nav>
-  </header>
+</header>
 
 
     <%= yield %>
-
 
   </body>
 </html>
