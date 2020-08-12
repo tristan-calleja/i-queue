@@ -5,7 +5,11 @@
 <div>
     <h1>MENU</h1>
     <p> 
-        Menu name:
-        <%= @menu.menu_name %>
+        Menu list:
+        <% @menus.each do |menu| %>
+        <div>
+        <%= menu.menu_name %>
+        </div>
+        <%end%>
     </p>
 </div>
