@@ -1,3 +1,4 @@
+
 <div class="container menubox align-items-center">
     <div class="row">
         <div class="col-md-6">
@@ -27,3 +28,27 @@
         </div>
     </div>
 </div>
+
+<h1>Menus#index</h1>
+<p>Find me in app/views/menus/index.html.erb</p>
+<% if user_signed_in? %>
+    <% if current_user.admin? %>
+        <%= link_to 'New Menu', new_menu_path %> 
+        <%= link_to  'Food Items', fooditems_path %>
+    <% end %>
+<% end %>
+<h2>Menu list:</h2>
+        <div>
+        
+            
+        <% @menus.each do |menu| %>
+        
+        <ul>
+            <li>
+            <%= link_to menu.menu_name, menu_path(menu.id) %>
+            
+            </li>
+        </ul>
+        <% end %>
+        <div>
+

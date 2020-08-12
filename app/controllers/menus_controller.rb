@@ -21,7 +21,7 @@ class MenusController < ApplicationController
     end
   
     def create
-      @menu = Menu.new
+      @menu = Menu.new(menu_params)
       # @menu["user_id"] = current_user.id
 
       respond_to do |format|
@@ -60,7 +60,7 @@ class MenusController < ApplicationController
     end
   
     def menu_params
-      params.require(:menu).permit(:fooditem_id, :price, :startdate, :enddate, :menu_name)
+      params.require(:menu).permit(:price, :startdate, :enddate, :menu_name, fooditem_ids: [])
     end
   
 
