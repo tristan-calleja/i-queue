@@ -30,6 +30,15 @@ class FooditemsController < ApplicationController
   end
 
   def update
+    respond_to do |format|
+      if @fooditem.update(fooditem_params)
+        format.html { redirect_to @fooditem, notice: 'Fooditem was successfully updated.' }
+        format.json { render :show, status: :ok, location: @fooditem }
+      else
+        format.html { render :edit }
+        format.json { render json: @fooditem.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def edit
