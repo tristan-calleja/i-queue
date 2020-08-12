@@ -2,7 +2,7 @@
 <p>Find me in app/views/menus/index.html.erb</p>
 <% if user_signed_in? %>
     <% if current_user.admin? %>
-        <%= link_to 'New Menu', new_menu_path(@menu) %> 
+        <%= link_to 'New Menu', new_menu_path %> 
         <%= link_to  'Food Items', fooditems_path %>
     <% end %>
 <% end %>
