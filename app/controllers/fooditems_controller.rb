@@ -47,6 +47,7 @@ class FooditemsController < ApplicationController
   end
 
   def edit
+    @menus = Menu.all
   end
 
   private
