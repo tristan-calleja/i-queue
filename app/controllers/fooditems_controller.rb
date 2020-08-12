@@ -3,6 +3,7 @@ class FooditemsController < ApplicationController
   
   def index
     @fooditems = Fooditem.all
+    @menus = Menu.all
   end
 
   def show

@@ -24,6 +24,9 @@
     <td><%= fooditem.unitprice %></td>
     <td><%= fooditem.itemcategory %></td>
     <td><%#= fooditem.menu %>
+        <%# @menus.each do |menu| %>
+            <%= collection_check_boxes(:fooditem, :menu_ids, Menu.all, :id, :menu_name) %>
+        <%# end %>
     <%# For loop for each menus with checkbox %>
     </td>
     <td>
