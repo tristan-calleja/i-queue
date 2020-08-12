@@ -10,6 +10,11 @@ class FooditemsController < ApplicationController
   end
 
   def destroy
+    @fooditem.destroy
+    respond_to do |format|
+      format.html { redirect_to fooditems_url, notice: 'Item was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   def new
