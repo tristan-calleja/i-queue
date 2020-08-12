@@ -1,8 +1,11 @@
 <h1>Menus#index</h1>
 <p>Find me in app/views/menus/index.html.erb</p>
-
-<%= link_to 'New Menu', new_menu_path(@menu) %> 
-
+<% if user_signed_in? %>
+    <% if current_user.admin? %>
+        <%= link_to 'New Menu', new_menu_path(@menu) %> 
+        <%= link_to  'Food Items', fooditems_path %>
+    <% end %>
+<% end %>
 <h2>Menu list:</h2>
         <div>
         
