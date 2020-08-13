@@ -10,7 +10,9 @@
 
 <% @profiles.each do |profile| %>
 
+<% if @profile.profile_image.attached? %>
 <%= image_tag profile.profile_image, :size => "200x200", class: "profile-picture" %> 
+<% end %>
 <h5> First name: <%= profile.firstname %> </h5>
 <h5> Last name: <%= profile.lastname %> </h5>
 <h5> Your email: <%= current_user.email %> </h5>
