@@ -24,14 +24,7 @@
 			height: 100%;
 			background: #f1f1f1 !important;
 		}
-		.textbox {
-			font-family: futura-pt, sans-serif;
-			font-weight: 500;
-			font-style: normal;
-			font-size: 25px;
-			color: #5e3a1c;
-			padding-top: 100px !important;
-		}
+		
 		.user_card {
 			font-family: futura-pt-bold, sans-serif;
 			font-weight: 700;
@@ -75,6 +68,10 @@
 			width: 100%;
 			background: #5e3a1c !important;
 			color: white !important;
+			font-family: futura-pt-bold, sans-serif;
+			font-weight: 700;
+			font-style: normal;
+
 		}
 		.login_btn:focus {
 			box-shadow: none !important;
@@ -334,5 +331,19 @@
 			  transform: scaleY(1);
 			}
 		}
+		.textbox {
+			font-family: futura-pt, sans-serif;
+			font-weight: 500;
+			font-style: normal;
+			font-size: 25px;
+			color: #5e3a1c;
+			margin-top: 140px !important;
+			animation: bounce;
+			animation-duration: 2s;
+		}
+		.donut {
+			animation: bounce;
+			animation-duration: 2s;
+		}
 	
-	
+
