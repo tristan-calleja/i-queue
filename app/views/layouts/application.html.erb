@@ -60,7 +60,7 @@
                 <div class="dropdown-menu">
                   <div class="dropdown-item">
 
-                  <% if @profile %>
+                  <% if @profile = true %>
                   <%= link_to  "Profile", user_profile_path(current_user.id, current_user.id), :class => "nav-item nav-link" %>
                   <% else %>
                   <%= link_to "Create Profile", new_user_profile_path(current_user.id), :class => "nav-item nav-link" %>
