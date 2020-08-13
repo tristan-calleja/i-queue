@@ -7,11 +7,12 @@
 <div class="container mt-4">
   <h4> Welcome to your profile page <strong><i><%= current_user.username %></i></strong> </h4>
 
-  <p id="notice"><%= notice %></p>
-
   <p>
+    <% if @profile.profile_image.attached? %>
     <%# <strong>Profile Picture:</strong> %>
+    <%# else %>
     <%= image_tag @profile.profile_image, :size => "200x200", class: "profile-picture" %>
+    <% end %>
   </p>
   <p>
     <strong>First Name:</strong>
