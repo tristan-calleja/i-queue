@@ -41,13 +41,13 @@ Rails.application.routes.draw do
 #   get 'fooditems/edit'
 
   get 'menus/landing'
-  get 'profiles/index'
-  get 'profiles/show'
-  get 'profiles/destroy'
-  get 'profiles/create'
-  get 'profiles/new'
-  get 'profiles/update'
-  get 'profiles/edit'
+  # get 'profiles/index'
+  # get 'profiles/show'
+  # get 'profiles/destroy'
+  # get 'profiles/create'
+  # get 'profiles/new'
+  # get 'profiles/update'
+  # get 'profiles/edit'
 
   resources :users do
     resources :profiles
