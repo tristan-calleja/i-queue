@@ -18,22 +18,29 @@
             <div class="vertical-tab" role="tabpanel">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <% @menus.each do |menu| %>
-                    <li role="presentation">
-                    <%= link_to menu.menu_name, menu_path(menu.id) %>
-                    </li>
-                    <% end %>
+                    <% @menus.each do |menu| %> 
+                    
+                    <li role="presentation"><a href="#Menu<%= menu.id %>" aria-controls="home" role="tab" data-toggle="tab"><%= menu.menu_name %></a></li>
+                    <%# <%= link_to menu.menu_name, menu_path(menu.id) %> 
+                    
+                    <% end %> 
                     
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content tabs">
-                    <% @menus.each do |menu| %>
-                    <div role="tabpanel" class="tab-pane fade" >
-                        <%= @menus.name %>
-                        
+                    <% @menus.each do |menu| %> 
+                    <div role="tabpanel" class="tab-pane fade in active" id="Menu<%= menu.id %>">
+                        <h3><%= menu.menu_name %></h3>
+                        <div>
+                        <% menu.fooditems.each do |item| %>
+                            <p><%= item.name %></p>
+                        <% end %>
+                        </div>
                     </div>
-                    <% end %>
+                        
+                
+                    <% end %> 
                 </div>
             </div>
         </div>

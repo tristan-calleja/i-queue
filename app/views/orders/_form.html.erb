@@ -1,0 +1,27 @@
+<%= form_for @order do |f| %>
+
+    <% if profile.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(profile.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+            <ul>
+            <% profile.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="container">
+
+        <div class="form-row mb-4">
+                <%= collection_check_boxes(:order, :fooditem_id, Fooditem.all, :id, :name)%>
+        </div>
+
+        <div class="form-row mt-3">
+            <%= f.submit "Submit", class: "btn btn-primary" %>
+        </div>
+    </div>
+
+
+<% end %>
