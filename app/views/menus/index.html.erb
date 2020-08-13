@@ -1,17 +1,16 @@
 <div class="container mt-4">
-
     <% if user_signed_in? %>
         <% if current_user.admin? %>
             <%= link_to 'New Menu', new_menu_path, class: "btn btn-success" %> 
             <%= link_to  'Food Items', fooditems_path, class: "btn btn-primary" %>
         <% end %>
     <% end %>
-
 </div>
 
 <div class="container menubox align-items-center">
     <div class="row">
         <div class="col-md-12">
+        <h1 class="mb-4">All Menus</h1>
             <div class="vertical-tab" role="tabpanel">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
