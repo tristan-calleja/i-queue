@@ -58,12 +58,7 @@ class ProfilesController < ApplicationController
   private
 
   def set_profile
-    if Profile.exists?(params[:id])
-      @profile = Profile.find(params[:id])
-    else
-      @profile = Profile.new
-      redirect_to profiles_new_path
-    end
+    @profile = Profile.find_by(user_id: params[:id])
   end
 
   def profile_params
