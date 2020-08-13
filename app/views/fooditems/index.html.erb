@@ -34,7 +34,7 @@
     <td>
         <%= link_to "Edit", edit_fooditem_path(fooditem), class: "btn btn-warning" %>
 
-        <%= link_to "Delete fooditem", fooditem_path(fooditem), method: "delete", data:{ confirm: "Are you sure you want to delete this fooditem"}, class: "btn btn-danger" %>
+        <%= link_to "Delete", fooditem_path(fooditem), method: "delete", data:{ confirm: "Are you sure you want to delete this fooditem"}, class: "btn btn-danger" %>
 
         <%#= link_to "Validate", fooditem_path(fooditem), method: "patch", class: "btn btn-success" %>
         <%# UPDATE THE PRODUCT %>
