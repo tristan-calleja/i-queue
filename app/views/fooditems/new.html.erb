@@ -1,4 +1,8 @@
 <h1>Fooditems#new</h1>
 <p>Find me in app/views/fooditems/new.html.erb</p>
 
+<%= link_to 'Back to List', fooditems_path, class: "btn btn-secondary" %>
+
+<div class="container mt-4">
 <%= render 'form', profile: @fooditem %>
+</div>
