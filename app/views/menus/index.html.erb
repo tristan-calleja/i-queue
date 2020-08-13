@@ -14,7 +14,7 @@
 
 <div class="container menubox align-items-center">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="vertical-tab" role="tabpanel">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
@@ -31,7 +31,10 @@
                 <div class="tab-content tabs">
                     <% @menus.each do |menu| %> 
                     <div role="tabpanel" class="tab-pane fade in active" id="Menu<%= menu.id %>">
+                    <div class="menu-card-title">
                         <h3><%= menu.menu_name %></h3>
+                        <%= link_to 'Edit Menu', edit_menu_path(menu), class: "btn btn-warning btn-sm" %> 
+                    </div>
                         <div>
                         <% menu.fooditems.each do |item| %>
                             <p><%= item.name %></p>
