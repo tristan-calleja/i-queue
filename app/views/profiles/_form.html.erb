@@ -14,37 +14,37 @@
 
 <div class=" container">
 
-   <div class="form-row">
-        <%= f.label :profile_image, "Upload Profile Pic" %>
+   <div class="form-row, mb-4">
+        <%= f.label :profile_image, "Upload Profile Pic", class: "font-weight-bold" %>
         <%= f.file_field :profile_image, class: "form-control bg-transparent border-0" %>
     </div>
-   <div class="form-row">
-        <%= f.label :firstname, "User First Name" %>
+   <div class="form-row, mb-4">
+        <%= f.label :firstname, "User First Name", class: "font-weight-bold" %>
         <%= f.text_field :firstname, class: "form-control" %>
     </div>
 
-    <div class="form-row">
-        <%= f.label :lastname, "User Last Name" %>
+    <div class="form-row, mb-4">
+        <%= f.label :lastname, "User Last Name", class: "font-weight-bold" %>
         <%= f.text_field :lastname, class: "form-control" %>
     </div>
 
-    <div class="form-row">
-        <%= f.label :address, "User Address" %>
+    <div class="form-row, mb-4">
+        <%= f.label :address, "User Address", class: "font-weight-bold" %>
         <%= f.text_field :address, class: "form-control" %>
     </div>
 
-    <div class="form-row">
-        <%= f.label :phone, "User Phone" %>
+    <div class="form-row, mb-4">
+        <%= f.label :phone, "User Phone", class: "font-weight-bold" %>
         <%= f.text_field :phone, class: "form-control" %>
     </div>
 
-    <div class="form-row">
-        <%= f.label :description, "User Description" %>
+    <div class="form-row, mb-4">
+        <%= f.label :description, "User Description", class: "font-weight-bold" %>
         <%= f.text_field :description, class: "form-control" %>
     </div>
 
     <div class="form-row mt-3">
-    <%= f.submit "Submit", class: "btn btn-primary" %>
+    <%= f.submit "Submit", class: "btn btn-success" %>
     </div>
 
 
