@@ -346,4 +346,7 @@
 			animation-duration: 2s;
 		}
 	
-
+		.profile-picture{
+			border-radius: 50%;
+			border: solid black 2px;
+		}
