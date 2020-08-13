@@ -3,9 +3,9 @@
 
 
 <div class="container">
-<%= link_to 'Add a new product', new_fooditem_path, class: "btn btn-warning" %>
+<%= link_to 'Add a new product', new_fooditem_path, class: "btn btn-success" %>
 <table class="table mt-4">
-<tr>
+<tr class="font-weight-bold">
     <td>ID</td>
     <td>Food Item</td>
     <td>Quantity</td>
@@ -21,7 +21,7 @@
     </td>
     <td><%= fooditem.name %></td>
     <td><%= fooditem.quantity %></td>
-    <td><%= fooditem.unitprice %></td>
+    <td>$<%= fooditem.unitprice %></td>
     <td><%= fooditem.itemcategory %></td>
     <td><% fooditem.menu.each do |menu| %>
         <%= menu.menu_name %>

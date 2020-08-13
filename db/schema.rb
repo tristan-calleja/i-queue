@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2020_08_12_082505) do
   create_table "fooditems_menus", id: false, force: :cascade do |t|
     t.bigint "menu_id", null: false
     t.bigint "fooditem_id", null: false
+    t.index ["menu_id", "fooditem_id"], name: "index_fooditems_menus_on_menu_id_and_fooditem_id"
   end
 
   create_table "menus", force: :cascade do |t|

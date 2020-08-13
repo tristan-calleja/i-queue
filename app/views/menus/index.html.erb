@@ -5,8 +5,8 @@
 
     <% if user_signed_in? %>
         <% if current_user.admin? %>
-            <%= link_to 'New Menu', new_menu_path, class: "btn btn-warning" %> 
-            <%= link_to  'Food Items', fooditems_path, class: "btn btn-warning" %>
+            <%= link_to 'New Menu', new_menu_path, class: "btn btn-success" %> 
+            <%= link_to  'Food Items', fooditems_path, class: "btn btn-primary" %>
         <% end %>
     <% end %>
 
