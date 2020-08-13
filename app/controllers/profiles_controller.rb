@@ -18,6 +18,7 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     @profile["user_id"] = current_user.id
+    @profile.id = current_user.id
     
     respond_to do |format|
       if @profile.save
@@ -31,9 +32,10 @@ class ProfilesController < ApplicationController
   end
 
   def update
+    @profile = Profile.find(params[:id])
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+        format.html { redirect_to user_profile_path(@profile), notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
       else
         format.html { render :edit }
@@ -58,7 +60,7 @@ class ProfilesController < ApplicationController
   private
 
   def set_profile
-    @profile = Profile.find_by(user_id: params[:id])
+    @profile = Profile.find(params[:id])
   end
 
   def profile_params
