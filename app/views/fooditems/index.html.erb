@@ -23,18 +23,20 @@
     <td><%= fooditem.quantity %></td>
     <td><%= fooditem.unitprice %></td>
     <td><%= fooditem.itemcategory %></td>
-    <td><%#= fooditem.menu %>
+    <td><% fooditem.menu.each do |menu| %>
+        <%= menu.menu_name %>
+        <% end %>
         <%# @menus.each do |menu| %>
-            <%= collection_check_boxes(:fooditem, :menu_ids, Menu.all, :id, :menu_name) %>
+            <%#= collection_check_boxes(:fooditem, :menu_ids, Menu.all, :id, :menu_name) %>
         <%# end %>
     <%# For loop for each menus with checkbox %>
     </td>
     <td>
         <%= link_to "Edit", edit_fooditem_path(fooditem), class: "btn btn-warning" %>
 
-        <%= link_to "Delete fooditem", fooditem_path(fooditem), method: "delete", data:{ confirm: "Are you sure you want to delete this fooditem"}, class: "btn btn-danger" %>
+        <%= link_to "Delete", fooditem_path(fooditem), method: "delete", data:{ confirm: "Are you sure you want to delete this fooditem"}, class: "btn btn-danger" %>
 
-        <%#= link_to "VALIDATE", edit_fooditem_path(fooditem), class: "btn btn-warning" %>
+        <%#= link_to "Validate", fooditem_path(fooditem), method: "patch", class: "btn btn-success" %>
         <%# UPDATE THE PRODUCT %>
     </td>
 </tr>
