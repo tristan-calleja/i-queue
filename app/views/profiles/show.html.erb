@@ -1,37 +1,43 @@
 <h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+  <%= link_to 'Back', root_path, class: "btn btn-secondary" %>
+  <%#= link_to  "Update Profile", edit_user_profile_path(current_user.id, current_user.id), :class => "nav-item nav-link" %>
 
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Profile Picture:</strong>
-  <%= image_tag @profile.profile_image, :size => "200x200" %>
-  
-</p>
-<p>
-  <strong>First Name:</strong>
-  <%= @profile.firstname %>
-</p>
+<div class="container mt-4">
+  <h4> Welcome to your profile page <strong><i><%= current_user.username %></i></strong> </h4>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.lastname %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @profile.address %>
-</p>
+  <p>
+    <%# <strong>Profile Picture:</strong> %>
+    <%= image_tag @profile.profile_image, :size => "200x200", class: "profile-picture" %>
+  </p>
+  <p>
+    <strong>First Name:</strong>
+    <%= @profile.firstname %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @profile.phone %>
-</p>
+  <p>
+    <strong>Last name:</strong>
+    <%= @profile.lastname %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @profile.description %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @profile.address %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @profile.phone %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @profile.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_profile_path(@profile), class: "btn btn-info" %>
+
+</div>
