@@ -43,7 +43,7 @@
         <%# <input class="form-check-input" type="radio">
             <label class="form-check-label"> %>
             <%# @menus.each do |menu| %>
-                <%= collection_check_boxes(:fooditem, :menu_ids, Menu.all, :id, :menu_name) %>
+                <%= collection_check_boxes(:fooditem, :menu_ids, Menu.all, :id, :menu_name)%>
             <%# end %>
             <%# </label> %>
         </div>

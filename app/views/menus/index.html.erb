@@ -1,22 +1,24 @@
 <h1>Menus#index</h1>
 <p>Find me in app/views/menus/index.html.erb</p>
-<% if user_signed_in? %>
-    <% if current_user.admin? %>
-        <%= link_to 'New Menu', new_menu_path(@menu) %> 
-        <%= link_to  'Food Items', fooditems_path %>
+
+<div class="container">
+
+    <% if user_signed_in? %>
+        <% if current_user.admin? %>
+            <%= link_to 'New Menu', new_menu_path(@menu), class: "btn btn-warning" %> 
+            <%= link_to  'Food Items', fooditems_path, class: "btn btn-warning" %>
+        <% end %>
     <% end %>
-<% end %>
-<h2>Menu list:</h2>
-        <div>
-        
-            
+
+    <div class="mt-3">
+    <h2>Menu list:</h2>
         <% @menus.each do |menu| %>
         
         <ul>
             <li>
             <%= link_to menu.menu_name, menu_path(menu.id) %>
-            
             </li>
         </ul>
         <% end %>
-        <div>
+    </div>
+</div>
