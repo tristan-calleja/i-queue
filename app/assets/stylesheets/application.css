@@ -350,3 +350,8 @@
 			border-radius: 50%;
 			border: solid black 2px;
 		}
+
+		.product-picture{
+			border-radius: 10%;
+			border: solid black 2px;
+		}
