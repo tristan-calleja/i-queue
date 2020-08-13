@@ -1,39 +1,32 @@
-<h1>Menus#show</h1>
-<p>Find me in app/views/menus/show.html.erb</p>
+<div class=" container mt-4">
+            <%= link_to 'Back', menus_path, class: "btn btn-secondary" %>
 
+            <div class= "mt-4">
+            <h1><%= @menu.menu_name %></h1>
+            </div>
 
-    <h1>MENU</h1>
-    <p> 
-        
-        <%= link_to 'Back', menus_path %>
-        <div>
-        <%= @menu.menu_name %>
-        </div>
-        
-        
-    </p>
+    <table class="table mt-4">
+    <tr class="font-weight-bold">
+        <td>ID</td>
+        <td>Food Item</td>
+        <td>Unit Price</td>
+        <td>Category</td>
+        <td>Actions</td>
+    </tr>
+    <% @menu.fooditems.each do |fooditem| %>
+    <tr>
+        <td>
+        <%= link_to fooditem.id, fooditem_path(fooditem.id) %>
+        </td>
+        <td><%= fooditem.name %></td>
+        <td><%= fooditem.unitprice %></td>
+        <td><%= fooditem.itemcategory %></td>
+        <td>
+            <%= link_to "Edit", edit_menu_fooditem_path(@menu, fooditem), class: "btn btn-warning" %>
+        </td>
+    </tr>
 
-<table class="table mt-4">
-<tr class="font-weight-bold">
-    <td>ID</td>
-    <td>Food Item</td>
-    <td>Unit Price</td>
-    <td>Category</td>
-    <td>Actions</td>
-</tr>
-<% @menu.fooditems.each do |fooditem| %>
-<tr>
-    <td>
-    <%#= link_to fooditem.id, fooditem_path(fooditem.id) %>
-    </td>
-    <td><%= fooditem.name %></td>
-    <td><%= fooditem.unitprice %></td>
-    <td><%= fooditem.itemcategory %></td>
-    <td>
-        <%= link_to "Edit", edit_menu_fooditem_path(@menu, fooditem), class: "btn btn-warning" %>
-    </td>
-</tr>
+    <% end %>
 
-<% end %>
-
-</table>
+    </table>
+</div>
