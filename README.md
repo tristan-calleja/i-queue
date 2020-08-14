@@ -1,24 +1,48 @@
-# README
+## SEI-23 Project 3 – I-Queue
+An app imagined and developped by Candy Leong, Evan Yeo, Darrell Yeo and Tristan Calleja
+https://i-queue.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Pitch
+Often, while waiting in line for your favorite food, you find the wait the to be neverending. How about we change that and try to speed things up so that your order is already created and you only have to pay once you (finally!) get to the counter?
+Here comes the <strong>I-Queue app</strong>.
+I-Queue allows you to browse through your favorite's restaurant menu and make your choice in advance.
+So don't wait pointlessly anymore. Use your <strong>I-Queue</strong> for the best.
 
-Things you may want to cover:
+### ERD and Wireframes
+ERD:
 
-* Ruby version
+![ERD](app/assets/images/ERD.png)
 
-* System dependencies
+Wireframes:
 
-* Configuration
+![wireframes Overview](app/assets/images/wireframes.png)
 
-* Database creation
+### MVP
+- User authentication
+- User profile
+- CRUD for entries
+- Active Storage
 
-* Database initialization
+### Further
+- Search
+- Create a cart
+- Create/edit order
+- Link order to profile
+- Payment
+- Category
 
-* How to run the test suite
+### Approach & Process
+- Entity Relationship Diagram (ERD) for database relationships
+- Wireframes for draft user interface and experience
+- Trello for project management 
+- Delegation of tasks according to strengths
+- Every member works on separate feature git branch
+- Multi-stage testing of merged code by group members
+- Deploy and populate database on Heroku
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Technologies used
+- Ruby on Rails
+- HTML, CSS
+- Bootstrap
+- Devise
+- ActiveStorage
