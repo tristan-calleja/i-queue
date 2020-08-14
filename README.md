@@ -1,5 +1,6 @@
 ## SEI-23 Project 3 – I-Queue
 An app imagined and developped by Candy Leong, Evan Yeo, Darrell Yeo and Tristan Calleja
+
 https://i-queue.herokuapp.com/
 
 ### Pitch
@@ -15,7 +16,7 @@ ERD:
 
 Wireframes:
 
-![wireframes Overview](app/assets/images/wireframes.png)
+![wireframes Overview](app/assets/images/Wireframes.png)
 
 ### MVP
 - User authentication
@@ -46,3 +47,6 @@ Wireframes:
 - Bootstrap
 - Devise
 - ActiveStorage
+
+### Final Words
+This app is currently still being developped by its creators. Please bear with us.
